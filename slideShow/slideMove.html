@@ -20,38 +20,38 @@
             background-color: pink;
             position: relative;
         }
-        .div1{
-            width:100px;
-            height: 100px;
-            background-color: red;
+        .div1,.div2,.div3{
+            width:200px;
+            height: 200px;
+            background-color: white;
             border:1px solid blue;
             position: absolute;
+            font-size: 12px;
+            overflow: hidden;
+        }
+        .div1{
+
             top:500px;
             left:500px;
         }
         .div2{
-            width:100px;
-            height: 100px;
-            background-color: red;
-            border:1px solid blue;
-            position: absolute;
+
             top: 500px;
             left:1500px;
         }
         .div3{
-            width:100px;
-            height: 100px;
-            background-color: red;
-            border:1px solid blue;
-            position: absolute;
             top:1200px;
             left:800px;
+            margin:0 auto;
+
         }
         .con_bottom{
             margin:0 auto;
         }
-        .div3{
-            margin:0 auto;
+        img{
+            width:30px;
+            height:30px;
+
         }
         /*@keyframes larger {*/
             /*100%{*/
@@ -67,62 +67,86 @@
 <body>
 <div class="container">
     <div class="con_top">
-        <div class="div1"></div>
-        <div class="div2"></div>
+        <div class="div1">
+            <p>这是文本1这是文本1这是文本1</p>
+            <img src="images/timg.jpg" alt="">
+        </div>
+        <div class="div2">这是文本2这是文本2这是文本是文本2这是文本2这是文本2这是文本2这是文本2</div>
     </div>
     <div class="con_bottom">
-        <div class="div3"></div>
+        <div class="div3">这是文本3这是文本3这是文本3这是文本3这是文本3</div>
     </div>
 </div>
 <script>
     $(function () {
-        var leaderX=0;
-        var leaderY=0;
-        var targetX=800;
-        var targetY=800;
-        var timer=null;
+//        var leaderX=0;
+//        var leaderY=0;
+//        var targetX=800;
+//        var targetY=800;
+//        var timer=null;
+
 //        1280
 //        686
 //        var w=$(window).width();
 //        var h=$(window).height();
 //        alert(w);
 //        alert(h);
+//        var h=$(window).offset().top;
+//        var l=$(window).offset().left;
+
+
 
         $(".div1").on("click",function () {
             $(".div1").animate({
-                "width":100+"px",
-                "height":100+"px"
-            },1000)
+                "width":200+"px",
+                "height":200+"px"
+            },1000);
+            $("p").animate({
+                "font-size":12+"px"
+            });
+//            $(".div1").css({
+//                "offsetTop":1+"px",
+//                "offsetLeft":2+"px"
+//            })
             $("html,body").animate({
                 "scrollTop":650+"px",
                 "scrollLeft":200+"px"
             },800);
-            $(".div3").animate({
+            $(".div3")
+                    .animate({
                 "width":400+"px",
-                "height":400+"px"
+                "height":400+"px",
+                "font-size":24+"px"
             },1000);
+            $("img").animate({
+                "width":30+"px",
+                "height":30+"px"
+            },1000)
         });
 
         $(".div3").on("click",function () {
             $(".div3").animate({
-                "width":100+"px",
-                "height":100+"px"
-            });
+                "width":200+"px",
+                "height":200+"px",
+                "font-size":12+"px"
+            },1000);
             $("html,body").animate({
                 "scrollTop":0+"px",
                 "scrollLeft":900+"px"
             },800);
             $(".div2").animate({
                 "width":400+"px",
-                "height":400+"px"
+                "height":400+"px",
+                "font-size":24+"px"
             },1000)
 
         });
         $(".div2").on("click",function () {
             $(".div2").animate({
-                "width":100+"px",
-                "height":100+"px"
-            },1000)
+                "width":200+"px",
+                "height":200+"px",
+                "font-size":12+"px"
+            },1000);
             $("html,body").animate({
                 "scrollTop":0,
                 "scrollLeft":0+"px"
@@ -130,6 +154,13 @@
             $(".div1").animate({
                 "width":400+"px",
                 "height":400+"px"
+            },1000);
+            $("p").animate({
+                "font-size":24+"px"
+            },1500);
+            $("img").animate({
+                "width":400+"px",
+                "height":200+"px"
             },1000)
         })
     })
