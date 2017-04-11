@@ -3,65 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="jquery.min.js"></script>
+    <script src="js/javascript.js"></script>
     <style>
-        body{
-            /*position: relative;*/
-            /*top:-500px;*/
-            /*left:-200px;*/
-            margin-top: -350px;
-            margin-left: -100px;
-            overflow: auto;
-        }
-        .container{
-            width:4000px;
-            height: 4000px;
-            margin:10px auto;
-            background-color: pink;
-            position: relative;
-        }
-        .div1,.div2,.div3{
-            width:200px;
-            height: 200px;
-            background-color: white;
-            border:1px solid blue;
-            position: absolute;
-            font-size: 12px;
-            overflow: hidden;
-        }
-        .div1{
 
-            top:500px;
-            left:500px;
-        }
-        .div2{
-
-            top: 500px;
-            left:1500px;
-        }
-        .div3{
-            top:1200px;
-            left:800px;
-            margin:0 auto;
-
-        }
-        .con_bottom{
-            margin:0 auto;
-        }
-        img{
-            width:30px;
-            height:30px;
-
-        }
-        /*@keyframes larger {*/
-            /*100%{*/
-                /*width:400px;*/
-                /*height:400px;*/
-            /*}*/
-        /*}*/
-        /*.changeLarger{*/
-            /*animation:larger 1s linear 0 normal;*/
-        /*}*/
     </style>
 </head>
 <body>
@@ -77,93 +23,5 @@
         <div class="div3">这是文本3这是文本3这是文本3这是文本3这是文本3</div>
     </div>
 </div>
-<script>
-    $(function () {
-//        var leaderX=0;
-//        var leaderY=0;
-//        var targetX=800;
-//        var targetY=800;
-//        var timer=null;
-
-//        1280
-//        686
-//        var w=$(window).width();
-//        var h=$(window).height();
-//        alert(w);
-//        alert(h);
-//        var h=$(window).offset().top;
-//        var l=$(window).offset().left;
-
-
-
-        $(".div1").on("click",function () {
-            $(".div1").animate({
-                "width":200+"px",
-                "height":200+"px"
-            },1000);
-            $("p").animate({
-                "font-size":12+"px"
-            });
-//            $(".div1").css({
-//                "offsetTop":1+"px",
-//                "offsetLeft":2+"px"
-//            })
-            $("html,body").animate({
-                "scrollTop":650+"px",
-                "scrollLeft":200+"px"
-            },800);
-            $(".div3")
-                    .animate({
-                "width":400+"px",
-                "height":400+"px",
-                "font-size":24+"px"
-            },1000);
-            $("img").animate({
-                "width":30+"px",
-                "height":30+"px"
-            },1000)
-        });
-
-        $(".div3").on("click",function () {
-            $(".div3").animate({
-                "width":200+"px",
-                "height":200+"px",
-                "font-size":12+"px"
-            },1000);
-            $("html,body").animate({
-                "scrollTop":0+"px",
-                "scrollLeft":900+"px"
-            },800);
-            $(".div2").animate({
-                "width":400+"px",
-                "height":400+"px",
-                "font-size":24+"px"
-            },1000)
-
-        });
-        $(".div2").on("click",function () {
-            $(".div2").animate({
-                "width":200+"px",
-                "height":200+"px",
-                "font-size":12+"px"
-            },1000);
-            $("html,body").animate({
-                "scrollTop":0,
-                "scrollLeft":0+"px"
-            },800);
-            $(".div1").animate({
-                "width":400+"px",
-                "height":400+"px"
-            },1000);
-            $("p").animate({
-                "font-size":24+"px"
-            },1500);
-            $("img").animate({
-                "width":400+"px",
-                "height":200+"px"
-            },1000)
-        })
-    })
-</script>
 </body>
 </html>
