@@ -3,25 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="jquery.min.js"></script>
-    <script src="js/javascript.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slideMove.js"></script>
     <style>
+        body{
+            overflow: auto;
+            margin:0;
+            padding:0;
+        }
+        .container{
+            width:4000px;
+            height: 4000px;
+            margin:10px auto;
+            margin-top: -350px;
+            margin-left: -100px;
+            background-color: gray;
+            position: relative;
+        }
+        .div1,.div2,.div3,.div4,.div5,.div6,.div7,.div8,.div9,.div10{
+            background-color: white;
+            border:1px solid cornflowerblue;
+            position: absolute;
+            font-size: 12px;
+            overflow: hidden;
+        }
+        .div1{
+            width:200px;
+            height:200px;
+        }
+        .div2,.div3,.div4,.div5,.div6,.div7,.div8,.div9,.div10{
+            width:150px;
+            height: 150px;
+        }
+        .div1{
+            top:400px;
+            left:200px;
+        }
+        .div2{
+            top: 400px;
+            left:600px;
+        }
+        .div3{
+            top:400px;
+            left:1000px;
+            margin:0 auto;
+        }
+        .div4{
+            top: 800px;
+            left:200px;
+        }
+        .div5{
+            top: 800px;
+            left:600px;
+        }
+        .div6{
+            top: 800px;
+            left:1000px;
+        }
+        .div7{
+            top: 1200px;
+            left:200px;
+        }
+        .div8{
+            top: 1200px;
+            left:600px;
+        }
+        .div9{
+            top: 1200px;
+            left:1000px;
+        }
+        .div10{
+            top: 1200px;
+            left:1400px;
+        }
 
+        .con_bottom{
+            margin:0 auto;
+        }
+        img{
+            width:30px;
+            height:30px;
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="con_top">
-        <div class="div1">
+        <div class="div1 move" id="1">
             <p>这是文本1这是文本1这是文本1</p>
             <img src="images/timg.jpg" alt="">
         </div>
-        <div class="div2">这是文本2这是文本2这是文本是文本2这是文本2这是文本2这是文本2这是文本2</div>
+        <div class="div2 move"  id="2">这是文本2这是文本2这是文本是文本2这是文本2这是文本2这是文本2这是文本2</div>
     </div>
-    <div class="con_bottom">
-        <div class="div3">这是文本3这是文本3这是文本3这是文本3这是文本3</div>
+    <div class="con_bottom" >
+        <div class="div3 move" id="3">这是文本3这是文本3这是文本3这是文本3这是文本3</div>
     </div>
+    <div class="div4 move"  id="4">这是文本4这是文本4这是文本是文本4这是文本4这是文本4这是文本4这是文本4</div>
+    <div class="div5 move"  id="5">这是文本5这是文本5这是文本5这是文本5这是文本5这是文本5这是文本5这是文本5</div>
+    <div class="div6 move"  id="6">这是文本6这是文本6这是文本6这是文本6这是文本6这是文本6这是文本6这是文本6</div>
+    <div class="div7 move"  id="7">这是文本7这是文本7这是文本7这是文本7这是文本7这是文本7这是文本7这是文本7</div>
+    <div class="div8 move"  id="8">这是文本8这是文本8这是文本8这是文本8这是文本8这是文本8这是文本8这是文本8</div>
+    <div class="div9 move"  id="9">这是文本9这是文本9这是文本9这是文本9这是文本9这是文本9这是文本9这是文本9</div>
+    <div class="div10 move" id="10">这是文本10这是文本10这是文本10这是文本10这是文本10这是文本10这是文本10</div>
+
 </div>
 </body>
 </html>
